@@ -1,38 +1,56 @@
-import express from "express"
-import cors from "cors"
-import { connectDB } from './config/db.js';
-import foodRouter from './routes/foodRoute.js';
+import express from "express";
+import cors from "cors";
+import { connectDB } from "./config/db.js";
+import foodRouter from "./routes/foodRoute.js";
 import userRouter from "./routes/userRoute.js";
-import 'dotenv/config'
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRoute.js";
-import aiRouter from "./routes/aiRoute.js"; // NEW: AI routes
+import aiRouter from "./routes/aiRoute.js";
+import "dotenv/config";
 
-//app config
-const app = express()
+// App config
+const app = express();
 const port = process.env.PORT || 4000;
 
-//middleware
-app.use(express.json())
-app.use(cors())
+// ✅ Middleware
+app.use(express.json());
 
-// db connection
+// ✅ CORS with full control
+app.use(
+  cors({
+    origin: "*", // You can replace "*" with your frontend URL for more security
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
+
+// ✅ Static file serving for images with proper headers
+app.use(
+  "/images",
+  express.static("uploads", {
+    setHeaders: (res) => {
+      res.setHeader("Cross-Origin-Resource-Policy", "cross-origin");
+      res.setHeader("Access-Control-Allow-Origin", "*");
+    },
+  })
+);
+
+// ✅ Database connection
 connectDB();
 
-// api endpoints
-app.use("/api/food", foodRouter)
-app.use("/images", express.static('uploads'))
-app.use("/api/user", userRouter)
-app.use("/api/cart", cartRouter)
-app.use("/api/order", orderRouter)
-app.use("/api/ai", aiRouter) // NEW: AI endpoints
+// ✅ API endpoints
+app.use("/api/food", foodRouter);
+app.use("/api/user", userRouter);
+app.use("/api/cart", cartRouter);
+app.use("/api/order", orderRouter);
+app.use("/api/ai", aiRouter);
 
+// ✅ Default route
 app.get("/", (req, res) => {
-    res.send("API Working")
-})
+  res.send("API Working 🚀");
+});
 
+// ✅ Start server
 app.listen(port, () => {
-    console.log(`Server started on http://localhost:${port}`)
-})
-
-// mongodb+srv://kinnarivaghela2004:kinnarivaghela2004@cluster0.qqje8x7.mongodb.net/?
+  console.log(`✅ Server started on http://localhost:${port}`);
+});
