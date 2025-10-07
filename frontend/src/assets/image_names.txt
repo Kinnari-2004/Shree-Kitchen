@@ -1,0 +1,60 @@
+add_icon_green.png
+add_icon_white.png
+aloo paratha.jpeg
+app_store.png
+assets.js
+bag_icon.png
+basket_icon.png
+bg-img.png
+bhakri.webp
+cheese dabeli.jpeg
+chole.jpeg
+choormaladoo.jpg
+chorafali.jpeg
+cross_icon.png
+daaldhokli.jpg
+dabeli.jpg
+facebook_icon.png
+ghee sada khakhra.jpg
+god papdi.jpg
+image_names.txt
+katka.jpg
+kd.jpg
+khajurpaak.jpg
+Khaman-Dhokla.jpg
+khamani.jpg
+khandvi.jpg
+kitchen.png
+kitchenbg.png
+logout_icon.png
+makhana.jpg
+malai roll.jpg
+methi khakahra.webp
+mini appam.jpeg
+misal.webp
+muthiya.jpg
+parcel_icon.png
+pav bhaji.jpg
+play_store.png
+poha.jpg
+profile_icon.png
+pulao.jpg
+rating_starts.png
+remove_icon_red.png
+sabudana.jpg
+sandwich.jpg
+search_icon.png
+selector_icon.png
+shree kitchen logo.jpg
+sk_logo.png
+sweets.jpg
+thepla.jpg
+tiffin.jpg
+toast sandwich.jpg
+twitter_icon.png
+undhiyu.jpg
+undhiyu1.jpg
+upma.jpg
+Vada-Pav.jpg
+whitedhokla.jpg
+Yellow And Beige Coffee Shop Menu.png
