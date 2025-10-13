@@ -35,10 +35,7 @@ app.use(
 //   })
 // );
 import path from 'path';
-
-const app = express();
 const __dirname = path.resolve();
-
 // Serve uploaded images
 app.use('/images', express.static(path.join(__dirname, 'uploads')));
 
