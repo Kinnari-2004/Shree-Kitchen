@@ -6,7 +6,7 @@ export const StoreContext = createContext(null)
 const StoreContextProvider = (props) => {
 
     const [cartItems,setCartItems] = useState({});
-    const url = "https://shree-kitchen-backend.onrender.com"
+    const url = "http://localhost:4000"
     const [token,setToken] = useState(""); // FIXED: Changed from {} to ""
     const [food_list,setFoodList] = useState([])
     const [user, setUser] = useState(null); // Store user data for personalization
