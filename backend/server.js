@@ -25,15 +25,25 @@ app.use(
 );
 
 // ✅ Static file serving for images with proper headers
-app.use(
-  "/images",
-  express.static("uploads", {
-    setHeaders: (res) => {
-      res.setHeader("Cross-Origin-Resource-Policy", "cross-origin");
-      res.setHeader("Access-Control-Allow-Origin", "*");
-    },
-  })
-);
+// app.use(
+//   "/images",
+//   express.static("uploads", {
+//     setHeaders: (res) => {
+//       res.setHeader("Cross-Origin-Resource-Policy", "cross-origin");
+//       res.setHeader("Access-Control-Allow-Origin", "*");
+//     },
+//   })
+// );
+
+import express from 'express';
+import path from 'path';
+
+const app = express();
+const __dirname = path.resolve();
+
+// Serve uploaded images
+app.use('/images', express.static(path.join(__dirname, 'uploads')));
+
 
 // ✅ Database connection
 connectDB();
