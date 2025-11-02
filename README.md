@@ -33,6 +33,3 @@ The application is structured as a monorepo containing three main parts: a custo
 - **Frontend**: React, Vite, React Router, Axios, CSS
 - **Admin Panel**: React, Vite, React Router, Axios, React Toastify, CSS
 - **Backend**: Node.js, Express.js, MongoDB, Mongoose, JWT, Bcrypt, Stripe, Multer, Google Generative AI (`@google/genai`)
-
-### Deployed link:  
-https://shree-kitchen-frontend-phjr.onrender.com/
