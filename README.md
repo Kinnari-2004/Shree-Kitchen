@@ -36,9 +36,3 @@ The application is structured as a monorepo containing three main parts: a custo
 
 ##Deployed on Render 
 https://shree-kitchen-frontend-phjr.onrender.com/
-| `POST /api/order/userorders`| Get the order history for a user.                |
-| `GET /api/order/list`     | Get a list of all orders (Admin).                  |
-| `POST /api/order/status`  | Update the status of an order (Admin).             |
-| `POST /api/ai/chat`       | Interact with the AI chatbot.                      |
-| `POST /api/ai/recommendations` | Get personalized food recommendations.        |
-| `POST /api/ai/search`     | Perform an AI-powered search of the menu.          |
